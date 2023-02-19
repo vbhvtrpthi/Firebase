@@ -18,7 +18,7 @@ function Firebase() {
 
     useEffect(async () => {
         //to fetch data on the basis of uid
-        let uid = 'bJp8tXrA3Qs0Zh7vWrOY';
+        let uid = '8QjYlpaZXsQFdx1FSHgT';
         let data = await database.users.doc(uid).get();
         console.log(data.data());
 
@@ -26,8 +26,8 @@ function Firebase() {
         // let data = await database.users.get();
         // data.forEach((obj)=>console.log(obj.data()))
 
-        //To order the data in descending order, on 'createdAT' field
-        // let data = await database.users.orderBy('createdAt','desc').get()
+        //To order the data in descending order, on 'createdAT' field,(if it is present, but it's not present here)
+        // let data = await database.users.orderBy('createdAt','desc').get() 
     })
 
     //Updating on the basis of uid

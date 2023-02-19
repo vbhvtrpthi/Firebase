@@ -32,6 +32,9 @@ export const auth = firebase.auth()
 const firestore = firebase.firestore();
 export const database = {
     users: firestore.collection('users')
+    
+    //changing collection name will change change the name in firestore collection
+    // users: firestore.collection('userms')
 }
 
 //exporting the firebase storage to store the image,videos

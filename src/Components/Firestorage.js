@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { storage } from '../firebase';
-
+//fire storage
 function Firestorage() {
     const [file, setFile] = useState('');
+
     const upload = () => {
         const uploadTask = storage.ref(`/data/${file.name}`).put(file);
         uploadTask.on('state_changed', fn1, fn2, fn3);
@@ -26,7 +27,7 @@ function Firestorage() {
     return (
         <div>
             <label htmlFor="file">File:</label>
-            <input type="file" accept="image/*" onChange={(e) => setFile(e.target.files[0])} />
+            <input id="file" type="file" accept="image/*" onChange={(e) => setFile(e.target.files[0])} />
             <button onClick={upload}>Upload</button>
         </div>
     )
